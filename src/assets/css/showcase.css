@@ -2,10 +2,9 @@
   .showcase {
     display: flex;
     justify-content: center;
-    justify-items: center;
     align-items: center;
     height: 364px;
-    /* position: relative; */
+    position: relative;
     background-color: #2B2B2B;
     display: flex;
     flex-direction: column;
@@ -52,11 +51,11 @@
   }
   
   .left-arrow {
-    left: 110px;
+    left: 120px;
   }
   
   .right-arrow {
-    right: 110px;
+    right: 120px;
   }
   
   /* Indicators */

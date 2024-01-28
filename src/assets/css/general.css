@@ -192,6 +192,6 @@ h3 {
     .bodydiv {
         display: flex;
         flex-direction: column;
-        padding: 1px;
+        height: 100%; 
     }
 }
