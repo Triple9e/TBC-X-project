@@ -1,13 +1,14 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
 html,
 body {
     background-color: #161616;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    /* display: flex;
-    flex-direction: column;
-     */
+    overflow: auto;
+    width: 100%;
 }
 
 .bodydiv {
@@ -15,11 +16,6 @@ body {
     flex-direction: column;
     flex: 1;
 
-}
-
-.bodydiv>*:not(header) {
-    padding-top: 10px;
-    /* Adjust the value as needed */
 }
 
 .p {
@@ -31,51 +27,32 @@ body {
 
 
 .flex-headline {
-
     background-image: url('../img/headline-background.jpg');
     background-size: fill;
-    /* Start with full width, maintain aspect ratio */
     background-position: center;
-    /* Keep the image centered */
     background-repeat: no-repeat;
-    /* Prevent the image from repeating */
     width: 100%;
-    /* Make the div take up the full width of its parent */
-    /* Maximum width the image should reach before zooming */
     height: 352px;
-    /* Full height of the parent container */
     display: flex;
     flex-direction: row;
-    /* Stack the text elements vertically */
     justify-content: center;
-    /* Center the text elements vertically */
     align-items: center;
-    /* Center the text elements horizontally */
     text-align: left;
-    /* Center the text content */
     transition: background-size 0.5s ease;
-    /* Smooth transition for background size */
     color: #fff;
-    /* Assuming white text color */
     font-family: Arial, sans-serif;
-    /* Replace with your preferred font */
     padding: 20px;
-    /* Some padding */
 }
 
-/* CSS Media Query to handle the zoom-in effect */
 @media (min-width: 800px) {
     .flex-headline {
         background-size: cover;
-        /* This will start the zoom-in effect */
     }
 }
 
 .flex-headline {
     display: flex;
-    /* Makes .text-row a flex container as well */
     flex-direction: row;
-    /* Stacks the <span> elements inside vertically */
 }
 
 .flex-headline {
@@ -90,45 +67,32 @@ body {
 
 .upper-text {
     font-size: 61px;
-    /* Or whatever size you require */
     line-height: 1;
-    /* Adjust line height to control space between lines */
     display: block;
-    /* This will make the text start on a new line */
     text-align: left;
-    ;
-    /* Additional styles like font-weight if needed */
 }
 
 .lower-text {
     font: arial;
     font-size: 36px;
-    /* Smaller font size for the text below */
     line-height: 1;
     display: block;
-    /* This will also start on a new line */
     margin-top: 10px;
-    /* Space between the upper text and lower text */
     text-align: left;
 }
 
 .courses-section {
     display: grid;
     place-items: center;
-    /* shorthand for align-items and justify-items */
     height: 1500px;
-
 }
 
 .content-section {
     display: grid;
     place-items: center;
     align-items: center;
-    /* shorthand for align-items and justify-items */
     height: 464.78px;
-    /* for full viewport height */
     background-color: #2b2b2b;
-
 }
 
 h3 {
@@ -140,47 +104,69 @@ h3 {
 
 .see-more a {
     text-align: left;
-    margin-bottom: 70px;
-    /* Align the link to the right */
     margin-left: 0px;
     color: #4eafff;
-    /* Color for links */
     text-decoration: none;
-    /* Remove underline from links */
     font-size: 20px;
 }
 
 
-.faq-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centers items along the main axis (horizontally, if the flex-direction is row) */
-    align-items: center;
-    /* Centers items along the cross axis (vertically, if the flex-direction is row) */
-    min-height: 400px;
-    /* For full viewport height, or set to the height you want */
-    margin-top: 20px;
-    padding: 40px;
-}
+
 
 @media only screen and (max-width: 768px) {
 
-    .flex-headline,
+  
     .content-section,
-    .courses-section,
-    .faq-section {
-        padding: 15px;
-        /* Adjust padding for smaller screens */
+    .courses-section {
+        padding: 65px;
         width: auto;
-        /* Take the full width */
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .headline-section {
+        height: 320px;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .flex-headline {
+        display:flex;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        align-items: center;
+        justify-items: center;
+        
+    }
+    .upper-text {
+        width: 100%;
+        font-size: 34px;
+    }
+    .lower-text {
+        font-size: 35px;
+        text-align: bottom;
+        line-height: 55px;
+        
+    }
+
+    .caption {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-section {
+        display: flex;
+        flex-direction: column;
+    }
     h3 {
         font-size: 20px;
-        /* Adjust font size as necessary */
+        width: 100%;
+    }
+
+    .see-more {
+        margin-top: 180px;
     }
 
 
@@ -192,6 +178,13 @@ h3 {
     .bodydiv {
         display: flex;
         flex-direction: column;
-        height: 100%; 
+        height: auto;
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .courses-section{
+        height: auto;  
     }
 }

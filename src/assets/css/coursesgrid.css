@@ -1,5 +1,4 @@
 
-
 .grid-container {
   height: auto;
   width: 980px;
@@ -8,81 +7,82 @@
   position: relative;
 
 }
+.courses-section {
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  padding: 1;
+  justify-items: auto;
+ }
 
-/* Grid container styles */
 #container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
-  row-gap: 24px; /* Space between grid items */
+  flex-direction: column;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr); 
+  row-gap: 24px; 
   column-gap: 40px; 
 }
 
-.courses-section {
- background-color: #161616;
- display: flex;
- flex-direction: column;
- padding: 1;
-}
+
 
 .courses {
   height:34px;
   color: white;
+  border:  2px wheat;
   font-size: 24px;
   margin-bottom: 64px;
   margin-left: 2px;
 }
-/* Grid item styles */
+
 .grid-container .grid-item {
-  background-color: #1a1a1a; /* Dark background for each item */
-  color: #ffffff; /* Light text color */
-  border: 20px white;
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+  border: 2px white;
   border-radius: 6px;
-  overflow: hidden; /* Ensures contents stay within the rounded corners */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   width: 300px;
   height: 414px;
 }
 
-
-/* Image styling */
 .grid-item img {
-  width: 100%; /* Full width of the card */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
 }
 
 .grid-item h2 {
-  padding-bottom: 10px; /* Space below the title */
-  margin-bottom: 10px; /* Space between the title and description */
+  padding-bottom: 10px; 
+  margin-bottom: 10px; 
   margin-top:40px; 
   margin-left:24px;
 }
 
 .grid-item p {
-  flex-grow: 1; /* Allows the description to fill the space and push the link to the bottom */
-  margin-bottom: 10px; /* Space between the description and the link */
+  flex-grow: 1; 
+  margin-bottom: 10px; 
   margin-left:24px;
 }
 
 .grid-item a {
   text-align: left;
-  margin-bottom: 32px; /* Align the link to the right */
+  margin-bottom: 32px; 
   margin-left:24px;
-  color: #4eafff; /* Color for links */
-  text-decoration: none; /* Remove underline from links */
+  color: #4eafff; 
+  text-decoration: none; 
 }
 
 
 @media only screen and (max-width: 768px) {
   #container {
     width: 100%;
-    height: auto;
-    position: relative;
-    grid-template-columns: repeat(1, 1fr); /* One column grid */
+
+    grid-template-columns: repeat(1, 1fr); 
   }
   .grid-item {
-      width: auto; /* Full width cards */
-      margin: 0 auto; /* Center cards if needed */
+      width: auto; 
+      margin: 0 auto; 
   }
 }
 
@@ -92,4 +92,14 @@
     height: auto;
     position: relative;
   }
+  .showcase-slide {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.showcase-slide > div {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
 }

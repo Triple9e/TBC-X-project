@@ -8,28 +8,27 @@
     background-color: #2B2B2B;
     display: flex;
     flex-direction: column;
-    
-
   }
+  
   
   .showcase-slide {
     display: flex;
-    justify-content: space-around; /* Distribute space around items */
+    justify-content: space-around; 
     align-items: center;
     position: absolute;
     width: 60%;
-    opacity: 0; /* Hide all slides initially */
+    opacity: 0; 
     transition: opacity 0.5s ease-in-out;
   }
   
   .showcase-slide[data-active] {
-    opacity: 1; /* Show the active slide */
+    opacity: 1; 
   }
   
   .showcase-slide img {
-    max-width: 20%; /* Adjust based on your actual logo sizes */
+    max-width: 20%; 
     height: auto;
-    margin: 0 5px; /* Spacing between logos */
+    margin: 0 5px; 
   }
 
   .showcase h2 {
@@ -51,11 +50,11 @@
   }
   
   .left-arrow {
-    left: 120px;
+    left: 140px;
   }
   
   .right-arrow {
-    right: 120px;
+    right: 140px;
   }
   
   /* Indicators */
@@ -84,16 +83,51 @@
   }
   
   @media only screen and (max-width: 768px) {
+    .showcase{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-items: center;
+      flex:1;
+      height: 430px;
+    
+
+      
+    }
     .showcase h2 {
-        margin-bottom: 20px; /* Adjust spacing */
-        font-size: 20px; /* Adjust font size */
+        margin-bottom: 40px; 
+        font-size: 20px; 
+        
     }
     .showcase-slide {
-        flex-direction: column; /* Stack logos vertically */
-        width: auto; /* Full width */
+        flex-direction: column; 
+        width: auto; 
+        transition: opacity 0.5s ease-in-out;
+        
     }
     .showcase-slide img {
-        max-width: 100%; /* Full width logos */
-        height: auto; /* Space between logos */
+        max-width: 100%; 
+        height: auto; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+         }
+
+    .arrow {
+      display: none;
     }
-  }
+
+    .indicator {
+      display: none;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      margin-top: 200px;
+      width: 100%;
+      
+    }
+
+}

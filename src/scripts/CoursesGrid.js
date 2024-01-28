@@ -1,4 +1,4 @@
-// Function to create a new div with content
+
 function createDiv(content) {
   const newDiv = document.createElement('div');
   newDiv.textContent = content;
@@ -62,40 +62,36 @@ const contentArray = [
   }
 ];
 
-// Function to fill a container div with multiple child divs
+
 function fillContainer() {
   const container = document.getElementById('container');
 
   contentArray.forEach(item => {
-    // Create the div and add class
+  
     const newDiv = document.createElement('div');
     newDiv.className = 'grid-item';
 
-    // Add image
     const image = document.createElement('img');
     image.src = item.imageUrl;
     newDiv.appendChild(image);
 
-    // Add title
     const title = document.createElement('h2');
     title.textContent = item.title;
     newDiv.appendChild(title);
 
-    // Add description
     const description = document.createElement('p');
     description.textContent = item.description;
     newDiv.appendChild(description);
 
-    // Add link
+
     const link = document.createElement('a');
     link.href = item.linkUrl;
     link.textContent = '\u2192 კურსის დეტალები';
     newDiv.appendChild(link);
 
-    // Append the new div to the container
     container.appendChild(newDiv);
   });
 }
 
-// Call the function to fill the container with content
+
 fillContainer();

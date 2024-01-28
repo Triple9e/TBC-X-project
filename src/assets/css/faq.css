@@ -1,19 +1,54 @@
-.accordion-item {
+.faq-section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
 
+.faqtitle {
+  width: 100%;
+  margin-bottom: 80px;
+  max-width: 968px;
+}
+
+.faqtitle a{
+    text-decoration: none;
+    color: #00AEF3;
+    font-size: 26px;
+    transition: color 0.40s;
+}
+
+.faq-left {
+  font-size: 36px;
+  margin-left: 20px;
+  float: left;
+  margin-top: 100px;
+}
+
+.faq-right {
+  font-size: 2px;
+  margin-right: 20px;
+  float: right;
+  margin-top: 100px;
+ 
+
+}
+
+.accordion {
+  padding-bottom: 30px;
+}
+
+.accordion-item {
   justify-content: center;
   align-items: center;
   text-align: left;
-  width: 920px;
-
+  width: 968px;
 }
 
 .accordion .accordion-question {
   background-color: transparent;
-  /* Dark background */
   color: #fff;
-  /* Light text */
   padding: 20px 30px;
-  /* Adjusted padding for a larger clickable area */
   border: none;
   text-align: left;
   outline: none;
@@ -22,77 +57,67 @@
   width: 100%;
   cursor: pointer;
   display: flex;
-  /* To align title and icon */
   justify-content: space-between;
-  /* Space between title and icon */
   align-items: center;
-  /* Center items vertically */
   border-bottom: 1px solid #2b2b2b;
 }
 
-/* Accordion icon styles */
 .accordion .accordion-question .accordion-icon {
   display: inline-block;
-  /* Use inline-block for better control */
   transition: transform 0.5s ease;
-  /* Smooth transform on rotate */
-  /* Add more styles for the icon if necessary */
 }
 
-/* Accordion answer/content styles */
 .accordion .accordion-answer {
-  background-color: transparent
-    /* Slightly lighter background than the question */
-  ;
+  background-color: transparent;
   overflow: hidden;
   transition: max-height 0.5s ease;
   max-height: 0;
-
-  ;
-  /* Start with max-height 0 to collapse the content */
 }
 
 .accordion .accordion-answer p {
   padding: 20px 30px;
-  /* Keep padding consistent with the question */
   margin: 0;
   color: #fff;
-  /* Light text color for readability */
 }
 
-/* Styles when the accordion is open */
 .accordion .accordion-question[aria-expanded="true"] {
   border-bottom: 1px solid transparent;
-  ;
-  /* Lighter background for active title */
 }
 
 .accordion .accordion-question[aria-expanded="true"] .accordion-icon {
   transform: rotate(180deg);
-  /* Flip the icon to indicate collapse action */
 }
 
 .accordion .accordion-answer[aria-expanded="true"] p {
   border-top: 1px solid #2b2b2b;
-  ;
-  /* Lighter background for active title */
 }
 
 .accordion-icon {
-  /* If it's a font icon */
-  font-size: 1em; /* Scales with surrounding text */
+  font-size: 1em; 
 }
 
-/* If you have SVG icons */
 svg {
   width: 100%;
   height: auto;
 }
 
 @media only screen and (max-width: 768px) {
+  .faq-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion-item {
+    text-align: left;
+    width: 100%;
+  }
+
   .accordion .accordion-question {
-      padding: 15px; /* Adjust padding for tappable area */
-      font-size: 16px; /* Adjust font size for readability */
+      padding: 15px;
+      font-size: 16px;
+  }
+  
+  .faq-right a {
+    margin-right: 120px;
   }
 }
-

@@ -1,12 +1,12 @@
-.header {
+header {
     height: 84px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #1A1E1F;
     position: sticky;
-    top: 0; /* This sets the top edge of the header to the top edge of the viewport */
-    z-index: 1000; /* Ensures the header stays above other content */
+    top: 0; 
+    z-index: 1000; 
     transition: background-color 0.3s;
   }
   
@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 0px;
-    background-color: transparent; /* Navbar background */
+    background-color: transparent; 
   }
 
   .navbar ul {
@@ -24,17 +24,17 @@
     margin: 0;
     display: flex;
     box-align: center;
-    gap: 50px; /* Space between links */
+    gap: 50px; 
   }
 
   .navbar a {
     text-decoration: none;
-    color: #fff; /* White text color */
+    color: #fff; 
     font-size: 16px;
     transition: color 0.40s;
   }
 
-  /* Additional styling for logo or highlighted items */
+ 
   .navbar .logo {
     display: flex;
     box-align: margin-left;
@@ -47,7 +47,7 @@
   }
  
   .navbar a:hover {
-    color: #00a3e0; /* Lighter text color on hover */
+    color: #00a3e0; 
   }
   .navbar a:active {
     opacity: 0.7;
@@ -56,9 +56,6 @@
   .TBXxUSAID-link {
     color: #00a3e0;
   } /*რადგან მხოლოდ ერთი ფეიჯია ამის გაკეთება მომიწია*/
-
- 
-
 
   .right-side {
     line-height: 26px;
@@ -69,25 +66,62 @@
 
  @media only screen and (max-width: 768px) {
   header {
-      height: auto; /* Adjust the height as needed */
-      padding: 10px 0; /* Reduce padding */
+    display: flex;
+    flex-direction: row;
+    height: 69px;
   }
   .navbar ul {
-      flex-direction: column; /* Stack navbar items */
-      align-items: center; /* Align items for better mobile view */
+      flex-direction: column; 
+      align-items: center; 
   }
   .navbar a {
-      font-size: 14px; /* Reduce font size */
-      padding: 5px; /* Add padding to increase clickable area */
+      font-size: 14px; 
+      padding: 5px; 
   }
   .navbar .logo-svg {
-      width: 120px; /* Reduce logo size */
+      width: 120px; 
       height: auto;
       max-width: 100%;
   }
-  /* Hide logo and show a menu icon instead */
+ 
   .navbar .logo {
+      width: 100%;
+      padding-left: 20px;
+  }
+ 
+}
+@media only screen and (max-width: 768px) {
+
+  .navbar-links {
       display: none;
   }
-  /* Add your menu icon here */
-}
+  /* .hamburger-icon {
+      display: block;
+  } */
+  /* .navcontainer {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+} */
+
+.navbar-links.active {
+  display: block;
+}}
