@@ -66,5 +66,9 @@
   .navbar .TBCxUSAIDlink {
     color: #00a3e0;
   }
- 
   
+  @media only screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items */
+    }
+}

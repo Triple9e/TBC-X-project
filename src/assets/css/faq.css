@@ -1,62 +1,85 @@
 .accordion-item {
 
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    width: 920px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 920px;
 
 }
 
 .accordion .accordion-question {
-    background-color: transparent; /* Dark background */
-    color: #fff; /* Light text */
-    padding: 20px 30px; /* Adjusted padding for a larger clickable area */
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    width: 100%;
-    cursor: pointer;
-    display: flex; /* To align title and icon */
-    justify-content: space-between; /* Space between title and icon */
-    align-items: center; /* Center items vertically */
-    border-bottom: 1px solid #2b2b2b;
-  }
-  
-  /* Accordion icon styles */
-  .accordion .accordion-question .accordion-icon {
-    display: inline-block; /* Use inline-block for better control */
-    transition: transform 0.5s ease; /* Smooth transform on rotate */
-    /* Add more styles for the icon if necessary */
-  }
-  
-  /* Accordion answer/content styles */
-  .accordion .accordion-answer {
-    background-color: transparent /* Slightly lighter background than the question */;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    max-height: 0;
+  background-color: transparent;
+  /* Dark background */
+  color: #fff;
+  /* Light text */
+  padding: 20px 30px;
+  /* Adjusted padding for a larger clickable area */
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  /* To align title and icon */
+  justify-content: space-between;
+  /* Space between title and icon */
+  align-items: center;
+  /* Center items vertically */
+  border-bottom: 1px solid #2b2b2b;
+}
 
-    ; /* Start with max-height 0 to collapse the content */
+/* Accordion icon styles */
+.accordion .accordion-question .accordion-icon {
+  display: inline-block;
+  /* Use inline-block for better control */
+  transition: transform 0.5s ease;
+  /* Smooth transform on rotate */
+  /* Add more styles for the icon if necessary */
+}
+
+/* Accordion answer/content styles */
+.accordion .accordion-answer {
+  background-color: transparent
+    /* Slightly lighter background than the question */
+  ;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  max-height: 0;
+
+  ;
+  /* Start with max-height 0 to collapse the content */
+}
+
+.accordion .accordion-answer p {
+  padding: 20px 30px;
+  /* Keep padding consistent with the question */
+  margin: 0;
+  color: #fff;
+  /* Light text color for readability */
+}
+
+/* Styles when the accordion is open */
+.accordion .accordion-question[aria-expanded="true"] {
+  border-bottom: 1px solid transparent;
+  ;
+  /* Lighter background for active title */
+}
+
+.accordion .accordion-question[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+  /* Flip the icon to indicate collapse action */
+}
+
+.accordion .accordion-answer[aria-expanded="true"] p {
+  border-top: 1px solid #2b2b2b;
+  ;
+  /* Lighter background for active title */
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion-item {
+      width: 100%; /* Full width on smaller screens */
   }
-  
-  .accordion .accordion-answer p {
-    padding: 20px 30px; /* Keep padding consistent with the question */
-    margin: 0;
-    color: #fff; /* Light text color for readability */
-  }
-  
-  /* Styles when the accordion is open */
-  .accordion .accordion-question[aria-expanded="true"] {
-    border-bottom: 1px solid transparent;
-    ; /* Lighter background for active title */
-  }
-  
-  .accordion .accordion-question[aria-expanded="true"] .accordion-icon {
-    transform: rotate(180deg); /* Flip the icon to indicate collapse action */
-  }
-  .accordion .accordion-answer[aria-expanded="true"] p {
-    border-top: 1px solid #2b2b2b;
-    ; /* Lighter background for active title */
-  }
+}

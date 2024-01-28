@@ -1,53 +1,70 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #1a1a1a; /* Dark background */
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Example font */
-    height: 228px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  /* Dark background */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  /* Example font */
+  height: 228px;
+}
+
+.footer-logo img {
+  width: 80px;
+  /* Adjust to the size of your actual logo */
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.footer-left p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right a {
+  margin-right: 10px;
+  /* Space between icons */
+}
+
+.footer-right a:last-child {
+  margin-right: 0;
+}
+
+.contact-button {
+  height: 39px;
+  width: 162px;
+  background-color: #00AEF3;
+  /* Bright blue button background */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  /* Remove underline from link */
+  border-radius: 7px;
+  /* Rounded corners */
+  transition: color 0.60s;
+}
+
+.contact-button:hover {
+  color: black;
+  background-color: #fff;
+  /* Slightly darker blue on hover */
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center;
   }
-  
-  .footer-logo img {
-    width: 80px; /* Adjust to the size of your actual logo */
+  .footer-left, .footer-right {
+      width: 100%;
   }
-  
-  .footer-left {
-    text-align: center;
-  }
-  
-  .footer-left p {
-    margin: 0;
-    line-height: 1.5;
-  }
-  
-  .footer-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer-right a {
-    margin-right: 10px; /* Space between icons */
-  }
-  
-  .footer-right a:last-child {
-    margin-right: 0;
-  }
-  
-  .contact-button {
-    height: 39px;
-    width: 162px;
-    background-color: #00AEF3; /* Bright blue button background */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none; /* Remove underline from link */
-    border-radius: 7px; /* Rounded corners */
-    transition: color 0.60s;
-  }
-  
-  .contact-button:hover {
-    color:black;
-    background-color: #fff ; /* Slightly darker blue on hover */
-  }
-  
+}

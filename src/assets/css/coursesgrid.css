@@ -65,4 +65,9 @@
   text-decoration: none; /* Remove underline from links */
 }
 
+@media only screen and (max-width: 768px) {
+  #container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
 

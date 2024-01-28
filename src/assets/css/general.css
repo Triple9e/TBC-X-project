@@ -2,7 +2,7 @@ html, body {
     background-color: #161616;
     background-size: cover;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
    
 }
 .bodydiv {
@@ -33,6 +33,7 @@ html, body {
     width: 62px;
     border-radius: 2px;
     cursor: pointer;
+
 }
 
 .flex-headline {
@@ -136,12 +137,10 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-    html,body {
-        margin: 5% 10% 0% 10%;
+    .bodydiv {
+        flex-direction: column;
     }
-    /* Styles for screens that are 768px wide or less */
 }
-
 
 
     
