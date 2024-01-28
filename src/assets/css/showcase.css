@@ -1,0 +1,82 @@
+
+  .showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 364px;
+    position: relative;
+    background-color: #2B2B2B;
+
+  }
+  
+  .showcase-slide {
+    display: flex;
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center;
+    position: absolute;
+    width: 60%;
+    opacity: 0; /* Hide all slides initially */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .showcase-slide[data-active] {
+    opacity: 1; /* Show the active slide */
+  }
+  
+  .showcase-slide img {
+    max-width: 20%; /* Adjust based on your actual logo sizes */
+    height: auto;
+    margin: 0 5px; /* Spacing between logos */
+  }
+
+  .showcase h2 {
+    color : white;
+    text-align: left;
+    margin-bottom: 300px;
+    margin-right: 700px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  /* Indicators */
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  
+  .indicator {
+    background-color: #fff;
+    border: 0px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0px 6px;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+   opacity: 1;
+  }
+  

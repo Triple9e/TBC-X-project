@@ -1,0 +1,68 @@
+/* Grid container styles */
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+  row-gap: 24px; /* Space between grid items */
+  column-gap: 40px; 
+}
+
+.grid-container {
+  height: 1317px;
+  width: 980px;
+  display: block;
+  position: absolute;
+}
+
+.courses-section {
+ background-color: #161616;
+}
+
+.courses {
+  height:34px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 64px;
+  margin-left: 2px;
+}
+/* Grid item styles */
+.grid-container .grid-item {
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+  border: 20px white;
+  border-radius: 6px;
+  overflow: hidden; /* Ensures contents stay within the rounded corners */
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 414px;
+}
+
+
+/* Image styling */
+.grid-item img {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.grid-item h2 {
+  padding-bottom: 10px; /* Space below the title */
+  margin-bottom: 10px; /* Space between the title and description */
+  margin-top:40px; 
+  margin-left:24px;
+}
+
+.grid-item p {
+  flex-grow: 1; /* Allows the description to fill the space and push the link to the bottom */
+  margin-bottom: 10px; /* Space between the description and the link */
+  margin-left:24px;
+}
+
+.grid-item a {
+  text-align: left;
+  margin-bottom: 32px; /* Align the link to the right */
+  margin-left:24px;
+  color: #4eafff; /* Color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+

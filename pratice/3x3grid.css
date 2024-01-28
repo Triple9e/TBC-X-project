@@ -1,0 +1,51 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns with equal width */
+    grid-gap: 20px; /* Adjust the gap between items */
+    padding: 20px; /* Padding around the grid */
+    background-color: #333; /* Dark background */
+    color: white; /* Text color */
+  }
+  
+  .grid-item {
+    background: #1a1a1a; /* Background of each grid item */
+    border-radius: 10px; /* Rounded corners for the grid items */
+    padding: 20px; /* Padding inside each grid item */
+    display: flex; /* Makes the grid item a flex container */
+    flex-direction: column; /* Stacks the content vertically */
+    justify-content: space-between; /* Distributes space between items */
+  }
+  
+  .grid-item img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Optional: if you want rounded corners on images */
+    margin-bottom: 20px; /* Space between image and text */
+  }
+  
+  .grid-item h2 {
+    margin: 0 0 10px 0; /* Adjusts spacing around the title */
+    font-size: 1.5em; /* Adjust title size */
+  }
+  
+  .grid-item p {
+    flex-grow: 1; /* Allows the paragraph to fill the space */
+  }
+  
+  .grid-item a {
+    text-decoration: none;
+    color: #06f; /* Color for the link */
+    /* Other styles for the link */
+  }
+  
+  /* Add media queries for responsiveness if needed */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+  }
