@@ -1,3 +1,14 @@
+
+
+.grid-container {
+  height: 1317px;
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
 /* Grid container styles */
 #container {
   display: grid;
@@ -6,15 +17,11 @@
   column-gap: 40px; 
 }
 
-.grid-container {
-  height: 1317px;
-  width: 980px;
-  display: block;
-  position: absolute;
-}
-
 .courses-section {
  background-color: #161616;
+ display: flex;
+ flex-direction: column;
+ padding: 1px;
 }
 
 .courses {
@@ -24,10 +31,11 @@
   margin-bottom: 64px;
   margin-left: 2px;
 }
+
 /* Grid item styles */
 .grid-container .grid-item {
-  background-color: #1a1a1a; 
-  color: #ffffff; 
+  background-color: #1a1a1a; /* Dark background for each item */
+  color: #ffffff; /* Light text color */
   border: 20px white;
   border-radius: 6px;
   overflow: hidden; /* Ensures contents stay within the rounded corners */
@@ -65,9 +73,24 @@
   text-decoration: none; /* Remove underline from links */
 }
 
+
 @media only screen and (max-width: 768px) {
   #container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    width: 100%;
+    height: auto;
+    position: relative;
+    grid-template-columns: repeat(1, 1fr); /* One column grid */
+  }
+  .grid-item {
+      width: auto; /* Full width cards */
+      margin: 0 auto; /* Center cards if needed */
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .grid-container  {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}

@@ -66,9 +66,28 @@
   .navbar .TBCxUSAIDlink {
     color: #00a3e0;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column; /* Stack navbar items */
-    }
+
+ @media only screen and (max-width: 768px) {
+  header {
+      height: auto; /* Adjust the height as needed */
+      padding: 10px 0; /* Reduce padding */
+  }
+  .navbar ul {
+      flex-direction: column; /* Stack navbar items */
+      align-items: center; /* Align items for better mobile view */
+  }
+  .navbar a {
+      font-size: 14px; /* Reduce font size */
+      padding: 5px; /* Add padding to increase clickable area */
+  }
+  .navbar .logo-svg {
+      width: 120px; /* Reduce logo size */
+      height: auto;
+      max-width: 100%;
+  }
+  /* Hide logo and show a menu icon instead */
+  .navbar .logo {
+      display: none;
+  }
+  /* Add your menu icon here */
 }

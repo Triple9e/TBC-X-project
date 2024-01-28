@@ -2,10 +2,14 @@
   .showcase {
     display: flex;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     height: 364px;
-    position: relative;
+    /* position: relative; */
     background-color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+    
 
   }
   
@@ -48,11 +52,11 @@
   }
   
   .left-arrow {
-    left: 10px;
+    left: 110px;
   }
   
   .right-arrow {
-    right: 10px;
+    right: 110px;
   }
   
   /* Indicators */
@@ -81,7 +85,16 @@
   }
   
   @media only screen and (max-width: 768px) {
-    .showcase-slide {
-        width: 100%; /* Full width on smaller screens */
+    .showcase h2 {
+        margin-bottom: 20px; /* Adjust spacing */
+        font-size: 20px; /* Adjust font size */
     }
-}
+    .showcase-slide {
+        flex-direction: column; /* Stack logos vertically */
+        width: auto; /* Full width */
+    }
+    .showcase-slide img {
+        max-width: 100%; /* Full width logos */
+        height: auto; /* Space between logos */
+    }
+  }

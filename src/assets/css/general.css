@@ -1,13 +1,25 @@
-html, body {
+html,
+body {
     background-color: #161616;
     background-size: cover;
-    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    /* display: flex;
     flex-direction: column;
-   
+     */
 }
+
 .bodydiv {
     display: flex;
     flex-direction: column;
+    flex: 1;
+
+}
+
+.bodydiv>*:not(header) {
+    padding-top: 10px;
+    /* Adjust the value as needed */
 }
 
 .p {
@@ -16,61 +28,60 @@ html, body {
     margin-bottom: 0;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-  }
-  
-.a {
-    background-color: blue;
-    border-color: rgb(41, 118, 211);
-    border-style: solid;
-    border-width: 1px;
-    color: rgb(41, 118, 211);
-    height: 36px;
-    width: 62px;
-    border-radius: 2px;
-    cursor: pointer;
 
-}
 
 .flex-headline {
-    
-     background-image: url('../img/headline-background.jpg');
-     background-size: fill; /* Start with full width, maintain aspect ratio */
-     background-position: center; /* Keep the image centered */
-     background-repeat: no-repeat; /* Prevent the image from repeating */
-     width: 100%; /* Make the div take up the full width of its parent */
- /* Maximum width the image should reach before zooming */
-     height: 352px; /* Full height of the parent container */
-     display: flex;
-     flex-direction: row; /* Stack the text elements vertically */
-     justify-content: center; /* Center the text elements vertically */
-     align-items: center; /* Center the text elements horizontally */
-     text-align: left; /* Center the text content */
-     transition: background-size 0.5s ease; /* Smooth transition for background size */
-     color: #fff; /* Assuming white text color */
-     font-family: Arial, sans-serif; /* Replace with your preferred font */
-     padding: 20px; /* Some padding */
+
+    background-image: url('../img/headline-background.jpg');
+    background-size: fill;
+    /* Start with full width, maintain aspect ratio */
+    background-position: center;
+    /* Keep the image centered */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    width: 100%;
+    /* Make the div take up the full width of its parent */
+    /* Maximum width the image should reach before zooming */
+    height: 352px;
+    /* Full height of the parent container */
+    display: flex;
+    flex-direction: row;
+    /* Stack the text elements vertically */
+    justify-content: center;
+    /* Center the text elements vertically */
+    align-items: center;
+    /* Center the text elements horizontally */
+    text-align: left;
+    /* Center the text content */
+    transition: background-size 0.5s ease;
+    /* Smooth transition for background size */
+    color: #fff;
+    /* Assuming white text color */
+    font-family: Arial, sans-serif;
+    /* Replace with your preferred font */
+    padding: 20px;
+    /* Some padding */
 }
 
 /* CSS Media Query to handle the zoom-in effect */
 @media (min-width: 800px) {
     .flex-headline {
-        background-size: cover; /* This will start the zoom-in effect */
+        background-size: cover;
+        /* This will start the zoom-in effect */
     }
 }
 
 .flex-headline {
-    display: flex; /* Makes .text-row a flex container as well */
-    flex-direction: row; /* Stacks the <span> elements inside vertically */
+    display: flex;
+    /* Makes .text-row a flex container as well */
+    flex-direction: row;
+    /* Stacks the <span> elements inside vertically */
 }
 
 .flex-headline {
     flex: 1;
 }
+
 .caption {
     display: grid;
     place-items: left;
@@ -78,50 +89,64 @@ html, body {
 }
 
 .upper-text {
-    font-size: 61px; /* Or whatever size you require */
-    line-height: 1; /* Adjust line height to control space between lines */
-    display: block; /* This will make the text start on a new line */
-    text-align: left;;/* Additional styles like font-weight if needed */
+    font-size: 61px;
+    /* Or whatever size you require */
+    line-height: 1;
+    /* Adjust line height to control space between lines */
+    display: block;
+    /* This will make the text start on a new line */
+    text-align: left;
+    ;
+    /* Additional styles like font-weight if needed */
 }
 
 .lower-text {
     font: arial;
-    font-size: 36px; /* Smaller font size for the text below */
+    font-size: 36px;
+    /* Smaller font size for the text below */
     line-height: 1;
-    display: block; /* This will also start on a new line */
-    margin-top: 10px; /* Space between the upper text and lower text */
+    display: block;
+    /* This will also start on a new line */
+    margin-top: 10px;
+    /* Space between the upper text and lower text */
     text-align: left;
 }
 
 .courses-section {
-  display: grid;
-  place-items: center; /* shorthand for align-items and justify-items */
-  height: 1500px;
+    display: grid;
+    place-items: center;
+    /* shorthand for align-items and justify-items */
+    height: 1500px;
 
 }
 
 .content-section {
     display: grid;
     place-items: center;
-    align-items: center; /* shorthand for align-items and justify-items */
-    height: 464.78px; /* for full viewport height */
+    align-items: center;
+    /* shorthand for align-items and justify-items */
+    height: 464.78px;
+    /* for full viewport height */
     background-color: #2b2b2b;
-  
-  }
-  
+
+}
+
 h3 {
     height: 264.45px;
     width: 957.91px;
-    color:#F4F4F4;
+    color: #F4F4F4;
     font-size: 28px;
 }
- 
+
 .see-more a {
     text-align: left;
-    margin-bottom: 70px; /* Align the link to the right */
-    margin-left:0px;
-    color: #4eafff; /* Color for links */
-    text-decoration: none; /* Remove underline from links */
+    margin-bottom: 70px;
+    /* Align the link to the right */
+    margin-left: 0px;
+    color: #4eafff;
+    /* Color for links */
+    text-decoration: none;
+    /* Remove underline from links */
     font-size: 20px;
 }
 
@@ -129,18 +154,44 @@ h3 {
 .faq-section {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers items along the main axis (horizontally, if the flex-direction is row) */
-    align-items: center; /* Centers items along the cross axis (vertically, if the flex-direction is row) */
-    min-height: 400px; /* For full viewport height, or set to the height you want */
+    justify-content: center;
+    /* Centers items along the main axis (horizontally, if the flex-direction is row) */
+    align-items: center;
+    /* Centers items along the cross axis (vertically, if the flex-direction is row) */
+    min-height: 400px;
+    /* For full viewport height, or set to the height you want */
     margin-top: 20px;
-    padding:40px;
+    padding: 40px;
 }
 
 @media only screen and (max-width: 768px) {
-    .bodydiv {
-        flex-direction: column;
+
+    .flex-headline,
+    .content-section,
+    .courses-section,
+    .faq-section {
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+        width: auto;
+        /* Take the full width */
     }
 }
 
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 20px;
+        /* Adjust font size as necessary */
+    }
 
-    
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .bodydiv {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+    }
+}

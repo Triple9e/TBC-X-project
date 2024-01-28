@@ -12,8 +12,8 @@
 }
 
 .footer-logo img {
-  width: 80px;
-  /* Adjust to the size of your actual logo */
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-left {
@@ -62,9 +62,11 @@
 @media only screen and (max-width: 768px) {
   .footer {
       flex-direction: column; /* Stack elements vertically */
-      text-align: center;
+      align-items: center; /* Center align the items */
+      padding: 15px; /* Adjust padding */
   }
-  .footer-left, .footer-right {
-      width: 100%;
+  .footer-right a,
+  .contact-button {
+      margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }
